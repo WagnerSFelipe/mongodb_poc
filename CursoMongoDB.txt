@@ -1,0 +1,62 @@
+#############MongoDB##############
+
+## Importante MongoDB
+
+ database é banco de dados
+ table é collection
+ row é a linha de registros que vira Document
+ 
+##Rodar Banco :
+ 
+   mongodb
+   
+##Rodar Shel , opções :
+
+ mongosh
+ mongosh "mongodb://localhost:28015"
+ mongosh --port 28015
+ 
+ exemplo de um host rodando o mongodb :
+ 
+   mongosh "mongodb://mongodb0.example.com:28015"
+   
+   
+##Comando criar BD:
+
+ use meudb
+
+##buscas seria como o select
+
+ db.meubanco.find() - Busca tudo
+ db.meubanco.findOne() - Apenas um registros
+ db.meubanco.findOne().campodaColection - Ira retornar apenas um campodaColection
+ 
+
+ CRUD:
+ Create - criar
+         insert
+         insertOne
+         insertMany
+
+ Read - Ler
+         find
+         findOne
+
+ Update - Atualiza
+      update 
+      updateOne
+      updateMany
+
+ Delete - deletar
+      deleteOne
+      deleteMany
+
+
+
+ ###Utilização do CAPPED collection
+
+ db.createCollection("logs", {
+    capped: true,
+    size: 2048,
+    max: 5
+})
